@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrabani Neogi | AI Systems & Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of Shrabani Neogi — Computer Science Engineer specializing in Agentic AI, Vision Transformers, Geospatial Intelligence, and Full-Stack Systems." />
+  <meta name="keywords" content="Shrabani Neogi, Software Engineer, AI Engineer, Machine Learning, SegFormer, RAG, Qdrant, React, FastAPI, Python, Portfolio" />
+  <meta name="author" content="Shrabani Neogi" />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shrabani Neogi | Portfolio" />
+  <meta property="og:description" content="Engineering agentic systems, vision transformers, and scalable software." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome for crisp icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient Interactive Canvas Background -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Floating Navigation -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="nav-brand" aria-label="Shrabani Neogi Home">
+        <div class="brand-avatar-wrapper">
+          <img src="profile.jpg" alt="Shrabani Neogi" class="brand-avatar" />
+        </div>
+        <span class="brand-name">Shrabani <span class="gradient-text">Neogi</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#terminal" class="nav-link"><i class="fa-solid fa-terminal"></i> CLI</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="resume-modal-btn" class="btn btn-outline btn-sm" aria-label="View Resume">
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <span class="pulse-dot"></span>
+            <span>Available for Summer 2026/27 Engineering Internships</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-up">
+            Architecting <span class="gradient-text">Agentic AI</span>, Vision Transformers & <span class="text-glow">Resilient Systems</span>.
+          </h1>
+
+          <p class="hero-description animate-fade-up delay-1">
+            Hi, I’m <strong>Shrabani Neogi</strong> — a Computer Science Engineering student at <strong>Heritage Institute of Technology</strong> (9.28 YGPA). 
+            I build intelligent decision-support engines, real-time semantic segmentation pipelines, and production-grade full-stack architectures.
+          </p>
+
+          <div class="hero-cta-group animate-fade-up delay-2">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-rocket"></i>
+              <span>Explore Projects</span>
+            </a>
+            <button id="copy-email-hero-btn" class="btn btn-glass btn-lg">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copy Email</span>
+            </button>
+            <a href="https://github.com/shrabani-stack" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/shrabani-neogi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+
+          <!-- Highlight Metric Badges -->
+          <div class="hero-metrics animate-fade-up delay-3">
+            <div class="metric-card">
+              <div class="metric-value">9.28</div>
+              <div class="metric-label">B.Tech YGPA (HIT Kolkata)</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-card">
+              <div class="metric-value">94.78%ile</div>
+              <div class="metric-label">JEE Mains (AIR 78,639)</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-card">
+              <div class="metric-value">3+</div>
+              <div class="metric-label">Flagship AI & GIS Systems</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-card">
+              <div class="metric-value">&lt;50ms</div>
+              <div class="metric-label">Vision Seg & RAG Latency</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Cyber Portrait & Holographic Telemetry -->
+        <div class="hero-visual animate-fade-up delay-2">
+          <div class="cyber-portrait-card">
+            <!-- Glowing rainbow prism aura matching user's photo lighting -->
+            <div class="prism-glow-ring"></div>
+
+            <div class="portrait-frame">
+              <img src="profile.jpg" alt="Shrabani Neogi" class="hero-portrait-img" />
+              <div class="portrait-overlay">
+                <div class="portrait-status-chip">
+                  <span class="pulse-dot"></span>
+                  <span>SYSTEM CORE ONLINE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Satellite Telemetry Chips -->
+            <div class="floating-chip chip-top-left">
+              <i class="fa-solid fa-eye" style="color:var(--accent-cyan)"></i>
+              <span>SegFormer-B0 • 38ms</span>
+            </div>
+
+            <div class="floating-chip chip-top-right">
+              <i class="fa-solid fa-brain" style="color:var(--accent-purple)"></i>
+              <span>Qdrant + BM25 RAG</span>
+            </div>
+
+            <div class="floating-chip chip-bottom-left">
+              <i class="fa-solid fa-award" style="color:var(--accent-amber)"></i>
+              <span>9.28 YGPA • HIT</span>
+            </div>
+
+            <div class="floating-chip chip-bottom-right">
+              <i class="fa-solid fa-location-crosshairs" style="color:var(--accent-emerald)"></i>
+              <span>Geospatial AI</span>
+            </div>
+
+            <!-- Integrated HUD Telemetry Bar -->
+            <div class="portrait-telemetry-bar">
+              <div class="telemetry-compact-row">
+                <span class="telemetry-compact-item"><strong style="color:var(--accent-cyan)">ORCA-X:</strong> Marine AI</span>
+                <span class="telemetry-sep">•</span>
+                <span class="telemetry-compact-item"><strong style="color:var(--accent-emerald)">Orbivia:</strong> Robotics</span>
+                <span class="telemetry-sep">•</span>
+                <span class="telemetry-compact-item"><strong style="color:var(--accent-purple)">MindBloom:</strong> Health</span>
+              </div>
+              <div class="terminal-prompt-inline" style="margin-top: 8px;">
+                <span class="prompt-user">shrabani@core:~$</span>
+                <span class="typing-text" id="hud-typing">initializing agentic decision engine...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ENGINEERING PROFILE</span>
+          <h2 class="section-title">Driven by Curiosity, Grounded in <span class="gradient-text">Rigorous Engineering</span></h2>
+          <p class="section-subtitle">Bridging machine intelligence, computer vision, and high-performance web systems.</p>
+        </div>
+
+        <!-- Personal Bio Spotlight -->
+        <div class="about-spotlight glass-panel">
+          <div class="spotlight-avatar-box">
+            <img src="bio-portrait.jpg" alt="Shrabani Neogi" class="spotlight-img" />
+            <div class="spotlight-badge">HIT Kolkata • CSE '28</div>
+          </div>
+          <div class="spotlight-content">
+            <div class="spotlight-tag"><i class="fa-solid fa-sparkles"></i> Innovator & Builder</div>
+            <h3>"Engineering intelligent systems that transition reliably from theory into real-world action."</h3>
+            <p>
+              I am a Computer Science undergraduate with a deep focus on Applied AI, Vision Transformers, and Resilient Software Architecture. 
+              Whether it's building agentic decision engines for fishermen navigating high-sea hazards, training transformers for autonomous ground rovers, 
+              or developing healthcare triage bots, I strive to build tech that makes a measurable difference.
+            </p>
+            <div class="spotlight-quick-facts">
+              <span><i class="fa-solid fa-graduation-cap" style="color:var(--accent-cyan)"></i> 9.28 YGPA</span>
+              <span><i class="fa-solid fa-code" style="color:var(--accent-purple)"></i> Full-Stack & Python Core</span>
+              <span><i class="fa-solid fa-bolt" style="color:var(--accent-amber)"></i> Fast Hackathon Prototyper</span>
+              <span><i class="fa-solid fa-location-dot" style="color:var(--accent-emerald)"></i> Kolkata & Siliguri, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel">
+            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Agentic AI & RAG</h3>
+            <p>
+              Designing end-to-end multi-agent orchestration, contextual retrieval with Qdrant vector databases, 
+              BM25 hybrid ranking, and multilingual voice workflows with Sarvam AI for real-world impact.
+            </p>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>Computer Vision & Robotics</h3>
+            <p>
+              Fine-tuning Vision Transformers (SegFormer-B0) on synthetic digital twins for 10-class outdoor terrain segmentation, 
+              transforming real-time pixel probabilities into instant autonomous vehicle control protocols.
+            </p>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Full-Stack & Geospatial</h3>
+            <p>
+              Engineering reliable distributed backends with FastAPI, Node.js, and Django, coupled with modern React and TypeScript 
+              frontends that handle heavy geospatial telemetry (Leaflet.js, INCOIS PFZ, Copernicus).
+            </p>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Academic Excellence</h3>
+            <p>
+              Maintaining an outstanding <strong>9.28 YGPA</strong> at Heritage Institute of Technology in Computer Science, 
+              backed by top 5% national competitive standing in JEE Mains 2024 (94.78 Percentile, AIR: 78,639).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FLAGSHIP WORK</span>
+          <h2 class="section-title">Engineered to Solve <span class="gradient-text">High-Stakes Problems</span></h2>
+          <p class="section-subtitle">Each project is an architectural study in safety-critical AI, robotics, and societal utility.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai-vision">Vision & Robotics</button>
+          <button class="filter-btn" data-filter="agentic">Agentic AI & RAG</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack & Health</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: ORCA-X -->
+          <article class="project-card glass-panel" data-category="agentic">
+            <div class="project-preview orca-preview">
+              <div class="preview-badge">Flagship AI & Geospatial</div>
+              <div class="interactive-radar-canvas">
+                <div class="ocean-grid"></div>
+                <div class="cyclone-track">
+                  <div class="vortex-core"></div>
+                  <div class="track-path"></div>
+                </div>
+                <div class="boat-node">
+                  <i class="fa-solid fa-ship"></i>
+                  <span class="vessel-tag">FV-204 [Safe Zone]</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Qdrant Vector DB</span>
+                <span class="tech-tag">Leaflet.js</span>
+                <span class="tech-tag">Capacitor</span>
+              </div>
+
+              <h3 class="project-title">ORCA-X: Ocean Reasoning & Collaborative AI</h3>
+              <p class="project-desc">
+                An agentic marine decision-support platform delivering real-time risk assessment, cyclone tracking, 
+                and ocean analytics for fishermen and maritime authorities.
+              </p>
+
+              <ul class="project-bullets">
+                <li><i class="fa-solid fa-check-circle"></i> Multilingual voice/text querying with Sarvam AI for vernacular Indian languages & LLM planner orchestration.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Integrated Open-Meteo, INCOIS PFZ (Potential Fishing Zones), Copernicus, and EEZ geospatial boundaries with offline satellite transponder support.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Qdrant vector database + BM25 hybrid embeddings with RAG synthesis for grounded marine safety advice.</li>
+              </ul>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm project-modal-trigger" data-project="orca">
+                  <i class="fa-solid fa-sliders"></i>
+                  <span>Test Architecture Demo</span>
+                </button>
+                <a href="https://github.com/shrabani-stack" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Repo 1</span>
+                </a>
+                <a href="https://github.com/shrabani-stack" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Repo 2</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: ORBIVIA -->
+          <article class="project-card glass-panel" data-category="ai-vision">
+            <div class="project-preview orbivia-preview">
+              <div class="preview-badge">Vision Transformers & Robotics</div>
+              <div class="vision-hud-sim">
+                <div class="segmentation-mask">
+                  <div class="seg-block mud" data-label="Mud (Class 4)"></div>
+                  <div class="seg-block rock" data-label="Rock (Class 2)"></div>
+                  <div class="seg-block road" data-label="Trail (Safe)"></div>
+                </div>
+                <div class="decision-beacon go">
+                  <span class="beacon-text">DECISION: GO</span>
+                  <span class="beacon-rate">mIoU: 74.8% | 38 FPS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tech-tag">SegFormer-B0</span>
+                <span class="tech-tag">PyTorch / Python</span>
+                <span class="tech-tag">Digital Twins</span>
+                <span class="tech-tag">Synthetic Data</span>
+                <span class="tech-tag">OpenCV</span>
+              </div>
+
+              <h3 class="project-title">Orbivia: AI-Powered Terrain Intelligence</h3>
+              <p class="project-desc">
+                Real-time semantic segmentation system transforming complex unstructured outdoor terrains 
+                into instant autonomous vehicle driving controls.
+              </p>
+
+              <ul class="project-bullets">
+                <li><i class="fa-solid fa-check-circle"></i> Fine-tuned SegFormer-B0 vision transformer across 10 outdoor terrain classes (rocks, mud, dense vegetation, sand).</li>
+                <li><i class="fa-solid fa-check-circle"></i> Instant translation of segmentation masks into autonomous vehicle commands: <strong>GO, SLOW, STOP</strong>.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Built interactive dashboard supporting image, video, and live webcam feeds with mIoU, precision, and recall metrics.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Leveraged synthetic digital twin environments for zero-manual-labeling generalization during a 12-hour hackathon.</li>
+              </ul>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm project-modal-trigger" data-project="orbivia">
+                  <i class="fa-solid fa-play"></i>
+                  <span>Launch Terrain Simulator</span>
+                </button>
+                <a href="https://github.com/shrabani-stack" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: MINDBLOOM + SEHAT SAARTHI -->
+          <article class="project-card glass-panel" data-category="fullstack">
+            <div class="project-preview mindbloom-preview">
+              <div class="preview-badge">Healthcare & Conversational AI</div>
+              <div class="health-pulse-sim">
+                <svg class="pulse-svg" viewBox="0 0 400 120">
+                  <path class="pulse-line" d="M 0,60 L 100,60 L 120,20 L 140,100 L 160,40 L 180,75 L 200,60 L 400,60" />
+                </svg>
+                <div class="bot-bubble">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                  <span>24/7 Medical Triage & Dispatch Ready</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Rasa AI</span>
+                <span class="tech-tag">Leaflet API</span>
+              </div>
+
+              <h3 class="project-title">MindBloom + Sehat Saarthi Dual Health Suite</h3>
+              <p class="project-desc">
+                Comprehensive digital mental wellness & automated community healthcare ecosystem providing instant AI triage and emergency navigation.
+              </p>
+
+              <ul class="project-bullets">
+                <li><i class="fa-solid fa-check-circle"></i> Mental health platform featuring guided self-reflection tools, stigma-free quizzes, and curated meditation routines.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Integrated 24/7 AI-powered conversational bot for instant medical queries, appointment scheduling, and Leaflet ambulance routing.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Robust Django backend with normalized relational schema for patient triage tracking.</li>
+              </ul>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm project-modal-trigger" data-project="mindbloom">
+                  <i class="fa-solid fa-comments"></i>
+                  <span>Interactive Walkthrough</span>
+                </button>
+                <a href="https://github.com/shrabani-stack" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub Repo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CAPABILITIES</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Stack & Tooling</span></h2>
+          <p class="section-subtitle">A balanced toolkit spanning low-level computing, machine learning, and scalable web engineering.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1: Core Languages -->
+          <div class="skill-category-card glass-panel">
+            <div class="skill-cat-header">
+              <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skills-chip-list">
+              <span class="skill-chip"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="skill-chip"><i class="fa-brands fa-java"></i> Java</span>
+              <span class="skill-chip"><i class="fa-solid fa-terminal"></i> C / C++</span>
+              <span class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skill-chip"><i class="fa-solid fa-code-branch"></i> TypeScript</span>
+              <span class="skill-chip"><i class="fa-solid fa-database"></i> SQL</span>
+              <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</span>
+            </div>
+          </div>
+
+          <!-- Card 2: AI / ML & Vision -->
+          <div class="skill-category-card glass-panel">
+            <div class="skill-cat-header">
+              <div class="cat-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <h3>AI, Vision & RAG</h3>
+            </div>
+            <div class="skills-chip-list">
+              <span class="skill-chip highlight"><i class="fa-solid fa-cubes"></i> SegFormer-B0</span>
+              <span class="skill-chip highlight"><i class="fa-solid fa-magnifying-glass-location"></i> Qdrant Vector DB</span>
+              <span class="skill-chip highlight"><i class="fa-solid fa-bolt"></i> RAG Synthesis</span>
+              <span class="skill-chip"><i class="fa-solid fa-filter"></i> BM25 Search</span>
+              <span class="skill-chip"><i class="fa-solid fa-language"></i> Sarvam AI (Vernacular)</span>
+              <span class="skill-chip"><i class="fa-solid fa-robot"></i> Rasa Conversational AI</span>
+              <span class="skill-chip"><i class="fa-solid fa-draw-polygon"></i> Synthetic Digital Twins</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Frameworks & Web -->
+          <div class="skill-category-card glass-panel">
+            <div class="skill-cat-header">
+              <div class="cat-icon"><i class="fa-solid fa-server"></i></div>
+              <h3>Frameworks & Backend</h3>
+            </div>
+            <div class="skills-chip-list">
+              <span class="skill-chip"><i class="fa-brands fa-react"></i> React</span>
+              <span class="skill-chip"><i class="fa-brands fa-node"></i> Node.js</span>
+              <span class="skill-chip"><i class="fa-solid fa-cube"></i> Next.js</span>
+              <span class="skill-chip highlight"><i class="fa-solid fa-gauge-high"></i> FastAPI</span>
+              <span class="skill-chip"><i class="fa-solid fa-network-wired"></i> Express.js</span>
+              <span class="skill-chip"><i class="fa-solid fa-leaf"></i> Django</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Databases, GIS & Tools -->
+          <div class="skill-category-card glass-panel">
+            <div class="skill-cat-header">
+              <div class="cat-icon"><i class="fa-solid fa-toolbox"></i></div>
+              <h3>Databases & DevOps Tools</h3>
+            </div>
+            <div class="skills-chip-list">
+              <span class="skill-chip"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+              <span class="skill-chip"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+              <span class="skill-chip"><i class="fa-solid fa-table"></i> MySQL</span>
+              <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+              <span class="skill-chip"><i class="fa-solid fa-map-location-dot"></i> Leaflet.js</span>
+              <span class="skill-chip"><i class="fa-solid fa-mobile-screen"></i> Capacitor</span>
+              <span class="skill-chip"><i class="fa-solid fa-code"></i> VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & MILESTONES -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">BACKGROUND</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Academic Milestones</span></h2>
+          <p class="section-subtitle">Consistent academic distinction and national competitive aptitude.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: B.Tech -->
+          <div class="timeline-item">
+            <div class="timeline-dot current"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-period">Aug 2024 – May 2028 (Ongoing)</span>
+                  <h3 class="timeline-role">B.Tech in Computer Science Engineering</h3>
+                  <h4 class="timeline-inst"><i class="fa-solid fa-building-columns"></i> Heritage Institute Of Technology, Kolkata, WB</h4>
+                </div>
+                <div class="gpa-badge">
+                  <span class="gpa-score">9.28</span>
+                  <span class="gpa-label">Overall YGPA</span>
+                </div>
+              </div>
+              <p class="timeline-details">
+                Core coursework: Data Structures & Algorithms, Object-Oriented Programming (Java/C++), Discrete Mathematics, 
+                Computer Architecture, Database Management Systems. Active member of robotics and AI development circles.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: JEE Mains -->
+          <div class="timeline-item">
+            <div class="timeline-dot milestone"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-period">Competitive Milestone • 2024</span>
+                  <h3 class="timeline-role">JEE Mains 2024</h3>
+                  <h4 class="timeline-inst"><i class="fa-solid fa-award"></i> National Testing Agency (NTA)</h4>
+                </div>
+                <div class="gpa-badge gold">
+                  <span class="gpa-score">94.78</span>
+                  <span class="gpa-label">Percentile (AIR 78,639)</span>
+                </div>
+              </div>
+              <p class="timeline-details">
+                Ranked in the top echelon among over 1.4 million engineering aspirants across India, demonstrating deep quantitative analysis, problem-solving, and algorithmic aptitude.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Higher Secondary -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-period">2021 – 2023</span>
+                  <h3 class="timeline-role">Higher Secondary (AISSCE)</h3>
+                  <h4 class="timeline-inst"><i class="fa-solid fa-school"></i> BSF Senior Secondary Residential School, Kadamtala, Siliguri</h4>
+                </div>
+                <div class="gpa-badge">
+                  <span class="gpa-score">77.6%</span>
+                  <span class="gpa-label">PCM, CS, English</span>
+                </div>
+              </div>
+              <p class="timeline-details">
+                Focused on Physics, Chemistry, Pure Mathematics, and Computer Science fundamentals with practical lab experimentation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Secondary -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-period">2009 – 2021</span>
+                  <h3 class="timeline-role">Secondary (CICSE)</h3>
+                  <h4 class="timeline-inst"><i class="fa-solid fa-school"></i> St. Joseph’s High School, Matigara, Siliguri</h4>
+                </div>
+                <div class="gpa-badge">
+                  <span class="gpa-score">91.2%</span>
+                  <span class="gpa-label">Distinction</span>
+                </div>
+              </div>
+              <p class="timeline-details">
+                Graduated with Honors distinction; demonstrated leadership in science fairs, debate, and foundational programming.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL PLAYGROUND -->
+    <section id="terminal" class="section terminal-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PLAYGROUND</span>
+          <h2 class="section-title">Interactive <span class="gradient-text">Developer Shell</span></h2>
+          <p class="section-subtitle">Prefer the command line? Query my background, tech stack, and projects via CLI commands.</p>
+        </div>
+
+        <div class="cli-window glass-panel">
+          <div class="cli-topbar">
+            <div class="cli-dots">
+              <span class="cli-dot red"></span>
+              <span class="cli-dot yellow"></span>
+              <span class="cli-dot green"></span>
+            </div>
+            <div class="cli-title">shrabani@workstation: ~/portfolio (zsh)</div>
+            <div class="cli-badge">v2.4-live</div>
+          </div>
+
+          <div class="cli-body" id="cli-output">
+            <div class="cli-line intro-line">
+              <span class="cli-highlight">Antigravity Terminal v2.4 initialized.</span> Type <code class="cmd-chip">help</code> to see available commands or click quick prompts below.
+            </div>
+            <div class="cli-line">Type <code class="cmd-chip">projects</code>, <code class="cmd-chip">skills</code>, <code class="cmd-chip">contact</code>, or <code class="cmd-chip">cat resume</code>.</div>
+          </div>
+
+          <div class="cli-quick-actions">
+            <button class="cli-btn" data-cmd="skills">skills</button>
+            <button class="cli-btn" data-cmd="projects">projects</button>
+            <button class="cli-btn" data-cmd="metrics">metrics</button>
+            <button class="cli-btn" data-cmd="hire">hire</button>
+            <button class="cli-btn" data-cmd="clear">clear</button>
+          </div>
+
+          <div class="cli-input-row">
+            <span class="cli-prompt">shrabani@core:~$</span>
+            <input type="text" id="cli-input" class="cli-input" placeholder="type command (e.g. 'help', 'cat resume') and press Enter..." autocomplete="off" spellcheck="false" />
+            <button id="cli-run-btn" class="cli-run" aria-label="Run command"><i class="fa-solid fa-arrow-turn-down"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Let’s Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-subtitle">Open for summer internships, open-source collaborations, and high-impact engineering roles.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-card glass-panel">
+            <div class="contact-info-header">
+              <h3>Contact Coordinates</h3>
+              <p>Feel free to reach out directly through any of these channels. I typically respond within a few hours!</p>
+            </div>
+
+            <div class="contact-links-list">
+              <div class="contact-item">
+                <div class="item-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="item-text">
+                  <span class="item-label">Direct Email</span>
+                  <a href="mailto:shrabanineogi2005@gmail.com" class="item-val">shrabanineogi2005@gmail.com</a>
+                </div>
+                <button class="copy-pill-btn" id="copy-email-btn" title="Copy Email">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <div class="contact-item">
+                <div class="item-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="item-text">
+                  <span class="item-label">Phone / WhatsApp</span>
+                  <a href="tel:+918597704518" class="item-val">+91 85977 04518</a>
+                </div>
+                <a href="https://wa.me/918597704518" target="_blank" rel="noopener noreferrer" class="copy-pill-btn" title="WhatsApp Chat">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <div class="item-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="item-text">
+                  <span class="item-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/shrabani-neogi" target="_blank" rel="noopener noreferrer" class="item-val">linkedin.com/in/shrabani-neogi</a>
+                </div>
+                <a href="https://linkedin.com/in/shrabani-neogi" target="_blank" rel="noopener noreferrer" class="copy-pill-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <div class="item-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="item-text">
+                  <span class="item-label">GitHub Repository Hub</span>
+                  <a href="https://github.com/shrabani-stack" target="_blank" rel="noopener noreferrer" class="item-val">github.com/shrabani-stack</a>
+                </div>
+                <a href="https://github.com/shrabani-stack" target="_blank" rel="noopener noreferrer" class="copy-pill-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <div class="item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="item-text">
+                  <span class="item-label">Current Location</span>
+                  <span class="item-val">Kolkata & Siliguri, West Bengal, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-card glass-panel">
+            <h3>Send a Direct Message</h3>
+            <p>Have an opportunity or an interesting project idea? Let's connect.</p>
+
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name</label>
+                  <input type="text" id="contact-name" placeholder="Sundar Pichai" required />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email Address</label>
+                  <input type="email" id="contact-email" placeholder="sundar@example.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Topic / Opportunity</label>
+                <input type="text" id="contact-subject" placeholder="Internship Opportunity / AI Collaboration" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" rows="4" placeholder="Hi Shrabani, we loved your work on ORCA-X and SegFormer terrain segmentation..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              
+              <div id="form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-logo">SN</span>
+        <p>© 2026 Shrabani Neogi. Built with zero dependencies, semantic HTML5, modern CSS & JavaScript.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/shrabani-stack" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/shrabani-neogi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:shrabanineogi2005@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT INTERACTIVE DETAIL MODAL -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <div class="modal-content glass-panel" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="modal-dynamic-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME VIEWER MODAL -->
+  <div class="modal-backdrop" id="resume-modal" aria-hidden="true">
+    <div class="modal-content resume-modal-content glass-panel" role="dialog" aria-modal="true">
+      <button class="modal-close" id="resume-close-btn" aria-label="Close modal">&times;</button>
+      <div class="resume-sheet">
+        <div class="resume-sheet-header">
+          <div>
+            <h2>Shrabani Neogi</h2>
+            <div class="resume-contact-inline">
+              <span><i class="fa-solid fa-phone"></i> +91 85977 04518</span>
+              <span><i class="fa-solid fa-envelope"></i> shrabanineogi2005@gmail.com</span>
+              <span><i class="fa-brands fa-linkedin"></i> in/shrabani-neogi</span>
+              <span><i class="fa-brands fa-github"></i> github.com/shrabani-stack</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+        </div>
+
+        <hr class="resume-divider" />
+
+        <section class="resume-sec">
+          <h3>Education</h3>
+          <div class="r-item">
+            <div class="r-row">
+              <strong>Heritage Institute Of Technology</strong>
+              <span>Kolkata, WB</span>
+            </div>
+            <div class="r-row">
+              <em>B.Tech in Computer Science Engineering (Overall YGPA: 9.28)</em>
+              <span>Aug. 2024 – May 2028</span>
+            </div>
+          </div>
+          <div class="r-item">
+            <div class="r-row">
+              <strong>BSF Senior Secondary Residential School</strong>
+              <span>Kadamtala, Siliguri</span>
+            </div>
+            <div class="r-row">
+              <em>Higher Secondary (AISSCE) – PCM, CS, English (77.6%)</em>
+              <span>2021 – 2023</span>
+            </div>
+          </div>
+          <div class="r-item">
+            <div class="r-row">
+              <strong>St. Joseph’s High School</strong>
+              <span>Matigara, Siliguri</span>
+            </div>
+            <div class="r-row">
+              <em>Secondary (CICSE) – (91.2%)</em>
+              <span>2009 – 2021</span>
+            </div>
+          </div>
+          <p class="r-meta"><strong>Competitive Exams:</strong> JEE Mains 2024 – 94.78 Percentile (AIR: 78639)</p>
+        </section>
+
+        <section class="resume-sec">
+          <h3>Projects</h3>
+          <div class="r-item">
+            <div class="r-row">
+              <strong>ORCA-X: Ocean Reasoning & Collaborative AI</strong>
+              <span>React, TS, Capacitor, Leaflet.js, FastAPI, Python, Qdrant</span>
+            </div>
+            <ul class="r-list">
+              <li>Engineered an agentic marine decision-support platform delivering real-time risk assessment, cyclone tracking, and ocean analytics for fishermen and authorities.</li>
+              <li>Implemented multilingual voice/text querying using Sarvam AI for language detection and LLM planner orchestration.</li>
+              <li>Integrated Open-Meteo, INCOIS PFZ, Copernicus, and geospatial EEZ data with offline satellite transponder support.</li>
+              <li>Utilized Qdrant vector database, BM25 embeddings, and RAG synthesis to deliver grounded safety advice.</li>
+            </ul>
+          </div>
+
+          <div class="r-item">
+            <div class="r-row">
+              <strong>Orbivia: AI-Powered Terrain Intelligence System</strong>
+              <span>SegFormer-B0, Python, Synthetic Data, Digital Twins</span>
+            </div>
+            <ul class="r-list">
+              <li>Fine-tuned a SegFormer-B0 vision transformer model for real-time semantic segmentation across 10 outdoor terrain classes (rocks, mud, vegetation).</li>
+              <li>Translated terrain segmentation outputs into instant autonomous decision controls (GO, SLOW, STOP).</li>
+              <li>Built an interactive dashboard supporting image, video, and live webcam feeds with mIoU, precision, and recall metrics.</li>
+              <li>Leveraged synthetic data from digital twin environments for robust generalization without manual labeling during a 12-hour hackathon.</li>
+            </ul>
+          </div>
+
+          <div class="r-item">
+            <div class="r-row">
+              <strong>MindBloom + Sehat Saarthi</strong>
+              <span>HTML/CSS, JS, Django, MySQL, Rasa, Leaflet API</span>
+            </div>
+            <ul class="r-list">
+              <li>Developed a mental health platform featuring guided self-reflection tools, stigma-free quizzes, and curated meditation routines.</li>
+              <li>Integrated a 24/7 AI-powered chatbot for instant medical queries, appointment scheduling, and ambulance navigation.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="resume-sec">
+          <h3>Technical Skills</h3>
+          <p><strong>Languages:</strong> Java, Python, C/C++, JavaScript, TypeScript, HTML/CSS, SQL</p>
+          <p><strong>Frameworks & Libraries:</strong> React, Node.js, Next.js, FastAPI, Express, Django, Rasa</p>
+          <p><strong>Developer Tools:</strong> Git, GitHub, VS Code, Capacitor, Leaflet.js</p>
+          <p><strong>Databases & AI/ML:</strong> MongoDB, MySQL, PostgreSQL, Qdrant (Vector DB), RAG, SegFormer-B0, BM25</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
